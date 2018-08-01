@@ -111,7 +111,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 250000
+#define BAUDRATE 115200
 
 // Enable the Bluetooth serial interface on AT90USB devices
 //#define BLUETOOTH
@@ -325,7 +325,7 @@
 // When temperature exceeds max temp, your heater will be switched off.
 // This feature exists to protect your hotend from overheating accidentally, but *NOT* from thermistor short/failure!
 // You should use MINTEMP for thermistor short/failure protection.
-#define HEATER_0_MAXTEMP 245
+#define HEATER_0_MAXTEMP 285
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
@@ -355,9 +355,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // i3 Mega
-  #define  DEFAULT_Kp 22.2
-  #define  DEFAULT_Ki 3.5
-  #define  DEFAULT_Kd 154
+  #define  DEFAULT_Kp 38.19
+  #define  DEFAULT_Ki 5.01
+  #define  DEFAULT_Kd 72.74
 
   // Ultimaker
   //#define  DEFAULT_Kp 22.2
@@ -574,7 +574,7 @@
 #define DEFAULT_XJERK                 10.0
 #define DEFAULT_YJERK                 10.0
 #define DEFAULT_ZJERK                  0.4
-#define DEFAULT_EJERK                  5.0
+#define DEFAULT_EJERK                  2.5
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -753,9 +753,9 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR true
-#define INVERT_Y_DIR false
-#define INVERT_Z_DIR false
+#define INVERT_X_DIR false
+#define INVERT_Y_DIR true
+#define INVERT_Z_DIR true
 
 // Enable this option for Toshiba stepper drivers
 //#define CONFIG_STEPPERS_TOSHIBA
@@ -763,7 +763,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
