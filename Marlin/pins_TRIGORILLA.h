@@ -23,10 +23,12 @@
 #define X_STEP_PIN         54
 #define X_DIR_PIN          55
 #define X_ENABLE_PIN       38
+#define X_CS_PIN           29
 
 #define Y_STEP_PIN         60
 #define Y_DIR_PIN          61
 #define Y_ENABLE_PIN       56
+#define Y_CS_PIN           25
 
 #define Y2_STEP_PIN        36
 #define Y2_DIR_PIN         34
@@ -35,14 +37,17 @@
 #define Z_STEP_PIN         46
 #define Z_DIR_PIN          48
 #define Z_ENABLE_PIN       62
+#define Z_CS_PIN           16
 
 #define Z2_STEP_PIN        36
 #define Z2_DIR_PIN         34
 #define Z2_ENABLE_PIN      30
+#define Z2_CS_PIN          37
 
 #define E0_STEP_PIN        26
 #define E0_DIR_PIN         28
 #define E0_ENABLE_PIN      24
+#define E0_CS_PIN          35
 
 // EndStops
 #define X_MIN_PIN           3
@@ -50,7 +55,7 @@
 #define Z_MIN_PIN          18
 
 #define X_MAX_PIN          43
-#define Y_MAX_PIN          -1 
+#define Y_MAX_PIN          -1
 #define Z_MAX_PIN          -1
 
 // Fans
@@ -72,19 +77,19 @@
 // Servos
 #ifdef NUM_SERVOS
 	#define SERVO0_PIN      11
-	
+
 	#if NUM_SERVOS > 1
 		#define SERVO1_PIN    6
 	#endif
-	
+
 	#if NUM_SERVOS > 2
 		#define SERVO2_PIN    5
 	#endif
-	
+
 	#if NUM_SERVOS > 3
 		#define SERVO3_PIN    4
 	#endif
-#endif	
+#endif
 
 #if defined(ANYCUBIC_TFT_MODEL)
   #define BEEPER_PIN       31
@@ -106,14 +111,14 @@
 		#define LCD_PINS_D5 25
 		#define LCD_PINS_D6 27
 		#define LCD_PINS_D7 29
-		
+
 		#ifdef REPRAP_DISCOUNT_SMART_CONTROLLER
 			#define BEEPER_PIN 31
-			
+
 			#define BTN_EN1 33
 			#define BTN_EN2 33
 			#define BTN_ENC 35
-			
+
 			#define SD_DETECT_PIN 49
 			#elif defined(LCD_I2C_PANELOLU2)
 				#define BTN_EN1 47  //reverse if the encoder turns the wrong way.
@@ -173,7 +178,7 @@
 			#else
 				//arduino pin which triggers an piezzo beeper
 				#define BEEPER_PIN 31  // Beeper on AUX-4
-			
+
 			//buttons are directly attached using AUX-2
 			#ifdef REPRAPWORLD_KEYPAD
 				#define BTN_EN1 64 // encoder
@@ -187,21 +192,21 @@
 				#define BTN_EN2 35
 				#define BTN_ENC -1  //the click
 			#endif
-			
+
 			#ifdef G3D_PANEL
 				#define SD_DETECT_PIN 49
 				#else
 				#define SD_DETECT_PIN -1  // Ramps does not use this port
 			#endif
-			
+
 		#endif
-		
+
 		#define LCD_PINS_RS 16
 		#define LCD_PINS_ENABLE 17
 		#define LCD_PINS_D4 23
 		#define LCD_PINS_D5 25
 		#define LCD_PINS_D6 27
 		#define LCD_PINS_D7 29
-		
+
 	#endif
-#endif	
+#endif
